@@ -20,6 +20,8 @@ const helmet=require('helmet')
 const dbUrl=process.env.DB_URL;
 const MongoStore = require('connect-mongo');
 // const dbUrl='mongodb://127.0.0.1:27017/dsa-tracker'
+const port = process.env.PORT || 4000;
+
 mongoose.connect(dbUrl);
 mongoose.set('strictQuery', true);
 
@@ -107,8 +109,7 @@ app.use((err,req,res,next)=>{
     res.status(statusCode).render('error',{err});
 })
 
-
-app.listen(8080,()=>{
-    console.log("Serving on port 8080")
-})
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+  })
 
