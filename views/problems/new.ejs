@@ -1,0 +1,119 @@
+<%  layout('layouts/boilerplate')  %>
+<div class="row">
+    <h1 class="text-center">New Problem</h1>
+    <div class="col-6 offset-3">
+    <form action="/problems" method="POST" novalidate class="validated-form">
+        <div class="mb-3">
+            <label class="form-label" for="title">Question no. and title</label>
+            <input class="form-control" type="text" id="title" name="problem[title]" required>
+        </div>
+        <div class="mb-3" >
+            <label class="form-label" for="difficulty">Difficulty</label>
+            <select  class="form-select form-select-sm" aria-label=".form-select-sm example" name="problem[difficulty]" id="difficulty" required>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        <div class="mb-3" >
+            <label class="form-label" for="topic">Topic</label>
+            <input class="form-control" type="text" id="topic" name="problem[topic]" required>
+        </div>
+        <div class="mb-3" >
+            <label class="form-label" for="reviewCount">Review Count</label>
+            <input class="form-control" type="number" min="0" max="0" id="reviewCount" name="problem[reviewCount]" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="solution">Solution without Code</label>
+            <textarea class="form-control" type="text" id="solution" name="problem[solution]" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="learning">New Learning from the problem</label>
+            <textarea class="form-control" type="text" id="learning" name="problem[learning]" required ></textarea>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-success">Add problem</button>
+        </div>
+    </form>
+    <a href="/problems">Back to all problems</a>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

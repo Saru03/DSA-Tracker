@@ -1,0 +1,39 @@
+<% layout('layouts/boilerplate') %>
+<div class="col">
+    <div class="card shadow">
+        <div class="card-body">
+            <h5 class="card-title mb-3">Question:<%= problem.title %></h5>
+                <h6 class="card-title d-inline mb-3">
+                    <span class="tags ml-2">Difficulty: <%= problem.difficulty %></span> 
+                    <span class="tags ml-2">Topic:<%= problem.topic %></span>
+                    <span class="tags ml-2"> Review Priority:<%= problem.reviewPriority %></span>
+                    <span class="ml-6"></span>
+                    <span class="float-md-end">
+                        <% if (problem.reviewPriority === "high") { %>
+                            <a class="btn btn-primary ml-auto " href="/problems/<%= problem._id %>/edit">Update Review Count</a>
+                        <% } %>
+                    </span>
+                </h6>  
+                
+            <div class="col-md-12 mt-3 ">
+                <div>
+                   <h5>Solution without Code:</h5>
+                    <p><%= problem.solution %></p>
+                </div>
+                <div style="height: 200px;">
+                    <h5>New learning from the problem:</h5>
+                    <p><%= problem.learning %></p>
+                
+                <div>
+                    <form class="d-inline" action="/problems/<%= problem.id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger">Delete Problem</button>
+                    </form>
+                    <a class="btn btn-warning" href="/problems/<%= problem._id %>/edit">Edit Problem</a>
+                </div>
+                
+               
+            </div>
+            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,102 @@
+<%  layout('layouts/boilerplate')  %>
+<div class="row">
+    <h1 class="text-center">Editing <%= problem.title %></h1>
+    <div class="col-6 offset-3">
+    <form action="/problems/<%= problem._id %>?_method=PUT" method="POST"novalidate class="validated-form"> 
+    <div class="mb-3">
+            <label class="form-label" for="title">Question no. and title</label>
+            <input class="form-control" type="text" id="title" name="problem[title]"  value="<%= problem.title %>" required>
+        </div>
+        <div class="mb-3" >
+            <label class="form-label" for="difficulty">Difficulty</label>
+            <select  class="form-select form-select-sm" aria-label=".form-select-sm example" name="problem[difficulty]" id="difficulty" required>
+                <option value="easy" <%= problem.difficulty ==='easy' ? 'selected' :''%>>Easy</option>
+                <option value="medium" <%= problem.difficulty ==='meduim' ? 'selected' :''%>>Medium</option>
+                <option value="hard" <%= problem.difficulty ==='high' ? 'selected' :''%>>Hard</option>
+            </select>
+        </div>
+        <div class="mb-3" >
+            <label class="form-label" for="topic">Topic</label>
+            <input class="form-control" type="text" id="topic" name="problem[topic]" value="<%= problem.topic %>" required>
+        </div>
+        <div class="mbz
+        -3" >
+            <label class="form-label" for="reviewPriority">Review Priority</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="problem[reviewPriority]" id="reviewPriority" required>
+                <option value="low" <%= problem.reviewPriority ==='low' ? 'selected' :''%>>Low</option>
+                <option value="midway" <%= problem.reviewPriority ==='midway' ? 'selected' :''%>>Midway</option>
+                <option value="high" <%= problem.reviewPriority ==='high' ? 'selected' :''%>>High</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="reviewCount">Review Count</label>
+            <input class="form-control" type="text" id="reviewCount" name="problem[reviewCount]" value="<%= problem.reviewCount %>" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="solution">Solution without Code</label>
+            <textarea class="form-control" type="text" id="solution" name="problem[solution]" required><%= problem.solution %></textarea>
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="learning">New Learning from the problem</label>
+            <textarea class="form-control" type="text" id="learning" name="problem[learning]" required><%= problem.solution %></textarea>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-success">Edit problem</button>
+        </div>
+    </form>
+    <a href="/problems/<%= problem._id %>">Cancel</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
