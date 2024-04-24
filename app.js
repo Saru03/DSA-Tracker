@@ -17,9 +17,9 @@ const userRoutes=require('./routes/user.js')
 const User=require('./models/user.js')
 const mongoSanitize = require('express-mongo-sanitize');
 const helmet=require('helmet')
-// const dbUrl=process.env.DB_URL;
+const dbUrl=process.env.DB_URL;
 const MongoStore = require('connect-mongo');
-const dbUrl='mongodb://127.0.0.1:27017/dsa-tracker'
+// const dbUrl='mongodb://127.0.0.1:27017/dsa-tracker'
 mongoose.connect(dbUrl);
 mongoose.set('strictQuery', true);
 
